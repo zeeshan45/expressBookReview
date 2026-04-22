@@ -20,9 +20,9 @@ const generalRoutes = require("./routes/general");
 const authRoutes = require("./routes/auth");
 const reviewRoutes = require("./routes/reviews");
 
-app.use("/api", generalRoutes);
-app.use("/auth", authRoutes);
-app.use("/api", reviewRoutes);
+app.use("/", generalRoutes);
+app.use("/", authRoutes);
+app.use("/", reviewRoutes);
 
 // Start server
 app.listen(PORT, () => {

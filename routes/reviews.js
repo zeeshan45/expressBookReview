@@ -1,16 +1,20 @@
-const express = require('express');
-const { getReviews, addOrModifyReview, deleteReview } = require('../controllers/reviewController');
-const { requireAuth } = require('../middlewares/auth');
+const express = require("express");
+const {
+  getReviews,
+  addOrModifyReview,
+  deleteReview,
+} = require("../controllers/reviewController");
+const { requireAuth } = require("../middlewares/auth");
 
 const router = express.Router();
 
 // Get reviews for a book
-router.get('/books/:isbn/reviews', getReviews);
+router.get("/review/:isbn", getReviews);
 
 // Add or modify review
-router.post('/books/:isbn/reviews', requireAuth, addOrModifyReview);
+router.put("/customer/auth/review/:isbn", requireAuth, addOrModifyReview);
 
 // Delete review
-router.delete('/books/:isbn/reviews', requireAuth, deleteReview);
+router.delete("/customer/auth/review/:isbn", requireAuth, deleteReview);
 
 module.exports = router;

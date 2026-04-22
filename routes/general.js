@@ -10,61 +10,62 @@ const axios = require("axios");
 const router = express.Router();
 
 // Get all books
-router.get("/books", getAllBooks);
+router.get("/", getAllBooks);
 
 // Get book by ISBN
-router.get("/books/isbn/:isbn", getBookByISBN);
+router.get("/isbn/:isbn", getBookByISBN);
 
 // Get books by author
-router.get("/books/author/:author", getBooksByAuthor);
+router.get("/author/:author", getBooksByAuthor);
 
 // Get books by title
-router.get("/books/title/:title", getBooksByTitle);
+router.get("/title/:title", getBooksByTitle);
 
 // =======================================================
 // Task 11: Async/Await functionality using Axios
 // =======================================================
 
-const getBooksAsync = async () => {
+router.get("/server/books", async (req, res) => {
   try {
-    const response = await axios.get("http://localhost:3000/api/books");
-    console.log(response.data);
+    const response = await axios.get("http://localhost:3000/");
+    return res.status(200).json(response.data);
   } catch (error) {
-    console.error(error);
+    return res.status(500).json({ message: "Error fetching books" });
   }
-};
+});
 
-const getBookByIsbnAsync = async (isbn) => {
+router.get("/server/isbn/:isbn", async (req, res) => {
   try {
-    const response = await axios.get(
-      `http://localhost:3000/api/books/isbn/${isbn}`,
-    );
-    console.log(response.data);
+    const isbn = req.params.isbn;
+    const response = await axios.get(`http://localhost:3000/isbn/${isbn}`);
+    return res.status(200).json(response.data);
   } catch (error) {
-    console.error(error);
+    return res.status(500).json({ message: "Error fetching book details" });
   }
-};
+});
 
-const getBookByAuthorAsync = async (author) => {
+router.get("/server/author/:author", async (req, res) => {
   try {
-    const response = await axios.get(
-      `http://localhost:3000/api/books/author/${author}`,
-    );
-    console.log(response.data);
+    const author = req.params.author;
+    const response = await axios.get(`http://localhost:3000/author/${author}`);
+    return res.status(200).json(response.data);
   } catch (error) {
-    console.error(error);
+    return res
+      .status(500)
+      .json({ message: "Error fetching book details by author" });
   }
-};
+});
 
-const getBookByTitleAsync = async (title) => {
+router.get("/server/title/:title", async (req, res) => {
   try {
-    const response = await axios.get(
-      `http://localhost:3000/api/books/title/${title}`,
-    );
-    console.log(response.data);
+    const title = req.params.title;
+    const response = await axios.get(`http://localhost:3000/title/${title}`);
+    return res.status(200).json(response.data);
   } catch (error) {
-    console.error(error);
+    return res
+      .status(500)
+      .json({ message: "Error fetching book details by title" });
   }
-};
+});
 
 module.exports = router;
