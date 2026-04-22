@@ -1,0 +1,20 @@
+[
+  {
+    "isbn": "1234567890",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "reviews": []
+  },
+  {
+    "isbn": "0987654321",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "reviews": []
+  },
+  {
+    "isbn": "1122334455",
+    "title": "1984",
+    "author": "George Orwell",
+    "reviews": []
+  }
+]
