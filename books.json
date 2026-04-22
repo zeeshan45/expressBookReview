@@ -9,12 +9,12 @@
     "isbn": "0987654321",
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
-    "reviews": []
+    "reviews": ["good book", "must read"]
   },
   {
     "isbn": "1122334455",
     "title": "1984",
     "author": "George Orwell",
-    "reviews": []
+    "reviews": ["awsome"]
   }
 ]
