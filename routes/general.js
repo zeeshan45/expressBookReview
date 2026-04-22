@@ -38,9 +38,12 @@ router.get("/server/isbn/:isbn", async (req, res) => {
   try {
     const isbn = req.params.isbn;
     const response = await axios.get(`http://localhost:3000/isbn/${isbn}`);
+    if (!response.data) {
+      return res.status(404).json({ message: "Book not found" });
+    }
     return res.status(200).json(response.data);
   } catch (error) {
-    return res.status(500).json({ message: "Error fetching book details" });
+    return res.status(404).json({ message: "Book not found" });
   }
 });
 
@@ -48,6 +51,11 @@ router.get("/server/author/:author", async (req, res) => {
   try {
     const author = req.params.author;
     const response = await axios.get(`http://localhost:3000/author/${author}`);
+    if (!response.data || response.data.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No books found for this author" });
+    }
     return res.status(200).json(response.data);
   } catch (error) {
     return res
@@ -60,6 +68,11 @@ router.get("/server/title/:title", async (req, res) => {
   try {
     const title = req.params.title;
     const response = await axios.get(`http://localhost:3000/title/${title}`);
+    if (!response.data || response.data.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No books found with this title" });
+    }
     return res.status(200).json(response.data);
   } catch (error) {
     return res
