@@ -1,25 +1,157 @@
 [
-  {
-    "isbn": "1234567890",
-    "title": "The Great Gatsby",
-    "author": "F. Scott Fitzgerald",
-    "reviews": []
-  },
-  {
-    "isbn": "0987654321",
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "reviews": [
-      "good book",
-      "must read"
-    ]
-  },
-  {
-    "isbn": "1122334455",
-    "title": "1984",
-    "author": "George Orwell",
-    "reviews": [
-      "awsome"
-    ]
-  }
+
+{
+
+"isbn": "1234567890",
+
+"title": "The Great Gatsby",
+
+"author": "F. Scott Fitzgerald",
+
+"reviews": []
+
+},
+
+{
+
+"isbn": "0987654321",
+
+"title": "To Kill a Mockingbird",
+
+"author": "Harper Lee",
+
+"reviews": [
+
+  "good book",
+
+  "must read"
+
+]
+
+},
+
+{
+
+"isbn": "1122334455",
+
+"title": "1984",
+
+"author": "George Orwell",
+
+"reviews": [
+
+  "awsome"
+
+]
+
+},
+
+{
+
+"isbn": "2233445566",
+
+"title": "Pride and Prejudice",
+
+"author": "Jane Austen",
+
+"reviews": [
+
+  "A timeless romance classic"
+
+]
+
+},
+
+{
+
+"isbn": "3344556677",
+
+"title": "The Hobbit",
+
+"author": "J.R.R. Tolkien",
+
+"reviews": [
+
+  "An adventurous fantasy journey"
+
+]
+
+},
+
+{
+
+"isbn": "4455667788",
+
+"title": "The Catcher in the Rye",
+
+"author": "J.D. Salinger",
+
+"reviews": []
+
+},
+
+{
+
+"isbn": "5566778899",
+
+"title": "Fahrenheit 451",
+
+"author": "Ray Bradbury",
+
+"reviews": [
+
+  "A powerful warning about censorship"
+
+]
+
+},
+
+{
+
+"isbn": "6677889900",
+
+"title": "The Lord of the Rings",
+
+"author": "J.R.R. Tolkien",
+
+"reviews": [
+
+  "Epic fantasy at its best"
+
+]
+
+},
+
+{
+
+"isbn": "7788990011",
+
+"title": "The Alchemist",
+
+"author": "Paulo Coelho",
+
+"reviews": [
+
+  "Inspires self-discovery"
+
+]
+
+},
+
+{
+
+"isbn": "8899001122",
+
+"title": "Brave New World",
+
+"author": "Aldous Huxley",
+
+"reviews": [
+
+  "Disturbing but brilliant"
+
+]
+
+}
+
 ]
