@@ -144,7 +144,7 @@ return res
 
 // Task 10: Get all books – Using async/await and Axios
 
-public_users.get('/async-get-books', async function (req, res) {
+router.get('/async-get-books', async function (req, res) {
 
 try {
 
@@ -162,7 +162,7 @@ return res.status(500).json({message: "Error fetching books"});
 
 // Task 11: Get book details by ISBN – Using Promises
 
-public_users.get('/async-get-books/isbn/:isbn', function (req, res) {
+router.get('/async-get-books/isbn/:isbn', function (req, res) {
 
 const isbn = req.params.isbn;
 
@@ -184,7 +184,7 @@ axios.get(http://localhost:3000/isbn/${isbn})
 
 // Task 12: Get book details by Author – Using async/await
 
-public_users.get('/async-get-books/author/:author', async function (req, res) {
+router.get('/async-get-books/author/:author', async function (req, res) {
 
 try {
 
@@ -204,7 +204,7 @@ return res.status(500).json({message: "Error fetching by author"});
 
 // Task 13: Get book details by Title – Using async/await
 
-public_users.get('/async-get-books/title/:title', async function (req, res) {
+router.get('/async-get-books/title/:title', async function (req, res) {
 
 try {
 
