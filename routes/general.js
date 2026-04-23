@@ -142,8 +142,6 @@ return res
 
 });
 
-const axios = require('axios');
-
 // Task 10: Get all books – Using async/await and Axios
 
 public_users.get('/async-get-books', async function (req, res) {
